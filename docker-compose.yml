@@ -5,6 +5,8 @@ services:
       restart: unless-stopped
       volumes:
         - './convos:/data'
+      environment:
+        - CONVOS_REVERSE_PROXY=1
       networks:
         - traefik
       labels:
