@@ -6,7 +6,7 @@ services:
       volumes:
         - './convos:/data'
       environment:
-        - CONVOS_REVERSE_PROXY=1
+        - CONVOS_REQUEST_BASE=https://convos.${BASE_DOMAIN:-ozeliurs.com}
       networks:
         - traefik
       labels:
